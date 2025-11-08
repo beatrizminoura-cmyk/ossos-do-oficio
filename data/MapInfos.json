@@ -1,0 +1,23 @@
+[
+null,
+{"id":1,"expanded":true,"name":"Cidade antigamente","order":2,"parentId":0,"scrollX":1084,"scrollY":610},
+{"id":2,"expanded":false,"name":"Introdução","order":1,"parentId":0,"scrollX":650.4,"scrollY":366},
+{"id":3,"expanded":false,"name":"casa do gigante","order":8,"parentId":7,"scrollX":929.1428571428571,"scrollY":522.8571428571428},
+{"id":4,"expanded":false,"name":"Cidade Grande","order":12,"parentId":12,"scrollX":1058.3999999999999,"scrollY":1300.8},
+{"id":5,"expanded":false,"name":"Casa abandonada","order":5,"parentId":7,"scrollX":1084,"scrollY":610},
+{"id":6,"expanded":false,"name":"Casa da aldeia 2F","order":6,"parentId":7,"scrollX":929.1428571428571,"scrollY":522.8571428571428},
+{"id":7,"expanded":true,"name":"Cidade atualmente - fase 1","order":3,"parentId":0,"scrollX":1165.2,"scrollY":1219.2},
+{"id":8,"expanded":false,"name":"Sala do laboratório","order":4,"parentId":7,"scrollX":650.4,"scrollY":366},
+null,
+{"id":10,"expanded":true,"name":"Escolher a fase","order":9,"parentId":7,"scrollX":640.8,"scrollY":450},
+null,
+{"id":12,"expanded":true,"name":"Sala do Laboratório - fase 3","order":10,"parentId":0,"scrollX":1084,"scrollY":610},
+{"id":13,"expanded":false,"name":"Casa 1","order":7,"parentId":7,"scrollX":929.1428571428571,"scrollY":522.8571428571428},
+null,
+null,
+{"id":16,"expanded":false,"name":"Cidade - fase 3","order":11,"parentId":12,"scrollX":1068,"scrollY":1390},
+null,
+null,
+null,
+{"id":20,"expanded":false,"name":"Laboratório - fase 2","order":13,"parentId":0,"scrollX":1084,"scrollY":610}
+]
