@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Ossos do Ofício official site <object data="08/11/25" type=""></object></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #3e2411;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #af6403;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(10%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #ffffff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #804011;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #0b4925;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #021608;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #e2ab70 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fffcf9 !important;
+  }
+  .navbar-nav li.active a {
+    color: #ffffff !important;
+    background-color: #8a3e07 !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #04330b !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: rgb(191, 90, 2) !important;
+  }
+  footer {
+    background-color: #273b23;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #db9f75;
+  }
+  footer a:hover {
+    color: #804012;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Ossos do Ofício: raízes de uma história</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">INÍCIO</a></li>
+        <li><a href="#band">PREFÁCIO</a></li>
+        <li><a href="#tour">FASES</a></li>
+        <li><a href="#contact">CONTATO</a></li>
+        <li><a href="#storyboard_section">STORYBOARDS</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="tutorial_gameplay">tutorial de gamplay</a></li>
+            <li><a href="tutorial_instalação">tutorial de instalação</a></li> 
+            <li><a href="linhas_codigo">Linhas de código</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-torget="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="capa do jogo.jpeg" alt="New York" width="200" height="300">
+        <div class="carousel-caption">
+          <h3>JOGUE JÁ!</h3>
+          <p>Venha conosco se aventurar no universo de Ossos do Ofício!</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="personagfens.jpeg" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Conheça os personagens</h3>
+          <p>Desvende os segredos da vida apocalíptica. É hora de aprender jogando</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="cenario.carros.jpeg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Vença os desafios e salve-os!</h3>
+          <p>Vença desafios matemáticos, conheça elementos e salve os zumbis desse terror biolégico!</p>
+        </div>      
+
+      </div>
+      <div class="item">
+        <img src="cenario.ponte.jpeg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Você é a nossa única esperança...</h3>
+          <p>Ajude Abel em suas poções complexas e mirabolantes!</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="cenario.apocalipse.jpeg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Eai, topa embarcar nessa aventura?</h3>
+          <p>Baixe e instale ossos do Ofício</p>
+        </div>      
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>PREFÁCIO</h3>
+  <p><em></em></p>
+  <p>Honrar aos ossos do ofício de um falecido pai. Quem diria que, no fim, isto representaria a salvação e triunfo da raça humana?
+
+Quando a Terra foi atingida por dois apocalipses simultâneos, o pesar de um possível futuro próspero recaiu sobre as costas esquálidas do Protagonista. Com a incidência dessas novas ameaças, o jovem sai da grande cidade de São Paulo em direção ao coração da Amazônia, onde a fazenda de seu pai jaz intocada, desde de sua morte. A fazenda logo se mostra equipada com um antigo e mofado laboratório, além da empoeirada biblioteca com livros didáticos e anotações.
+
+Os dois apocalipses funcionam em conjunto para aniquilação humana total: ambos os vírus surgiram em detrimento do derretimento das geleiras, em função do aquecimento global. Isso fez com que geleiras milenares derretessem, e que sua água se misturasse aos mares. O que ninguém sabia era o fato de que tais geleiras continham vírus mais que centenários, e que logo estes se mostrariam a nova ameaça emergente mundial. 
+
+Acompanhe nosso protagonista na jornada em busca da cura para esta pandemia mundial, através da matemática, química e alquimia, desvende segredos, recolha conhecimentos e encontre importantes aliados pelo caminho.
+
+Você acha que é capaz de salvar o mundo?</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Lílian (Líli)</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="lili.jpeg" class="img-circle person" alt="" width="300" height="300">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Pequenina energética</p>
+        <p>Ama pular corda, correr e praticar esportes</p>
+        <p>Tem 8 anos</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Abel</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="abel.jpeg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Cientista</p>
+        <p>Apresso por botânica e livros antigos de alquimia</p>
+        <p>Tem 19 anos</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Maitê</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="maite.jpeg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Posturada</p>
+        <p>Gosta de tiro ao alvo e luta corpo a corpo</p>
+        <p>Tem 21 anos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">FASES</h3>
+    <p class="text-center">Cenas principais do jogo<br> Mostrando por trás das cortinas!</p>
+    <!--Podemos colocar outras páginas direcionndo a vídeos ou alguma outra coisa relacionada a mecânica do jogo -->
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.28.31 (1).jpeg" alt="Paris" width="400" height="300">
+          <p><strong>Primeira fase</strong></p>
+          <p>Encontro com a criança</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.28.32.jpeg" alt="New York" width="400" height="300">
+          <p><strong>Primeira fase</strong></p>
+          <p>Resolva uma conta matemática </p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.28.32 (1).jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Primeira fase</strong></p>
+          <p>Cura da criança</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="fase2.conta matematica.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Segunda fase</strong></p>
+          <p>Resolva uma conta matemática</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="fase2.fazendo antidoto.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Segunda fase</strong></p>
+          <p>Fazendo antidoto</p>
+          
+        </div>
+      </div>
+       <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="fase2.distribuindo.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Segunda fase</strong></p>
+          <p>Distribuindo o antidoto</p>
+          
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="fase3.balaça.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Terceira fase</strong></p>
+          <p>Desafio balança</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="fase3.proveta.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Terceira fase</strong></p>
+          <p>Desafio proveta</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="fase3.antidoto pronto.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Terceira fase</strong></p>
+          <p>Criação do antidoto</p>
+          
+        </div>
+      </div>
+  </div>
+  
+  <!-- Modal -->
+
+<!-- Container (Contact Section) -->
+ 
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+       
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="container">
+  <h3 class="text-center">Contatos:</h3>
+  
+
+  <div class="row">
+    <div class="col-md-4">
+    <!--Colocar algo escrito para representar essas três informações-->
+      <p><span class="glyphicon glyphicon-map-marker"></span>Brasil, São Paulo</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Telefone: +55 11 97086-4213</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email:ossosdooficioraizes@gmail.com</p>
+    </div>
+   
+  <br>
+  <!--Colocar os nomes de todos do grupo ou algumas informações ou os storybords-->
+ <div id="storyboard_section" class="container">
+  <h3 class="text-center">STORYBOARDS</h3>   
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Introdução - Storyboard 1
+</a></li>
+    <li><a data-toggle="tab" href="#menu1">Desenvolvimento - Storyboard 2
+</a></li>
+    <li><a data-toggle="tab" href="#menu2">Conclusão - Storyboard 3</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Storyboard 1: Introdução</h2>
+      <img src="storybord1.jpeg">
+      <p>"O início de um novo caminho se estende à sua frente. Terá coragem de encará-lo?"</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Storyboard 2: Desenvolvimento</h2>
+      <img src="storybord2.jpeg">
+      <p>"Após ter conhecido a trama envolvente e o protagonista dedicado, prosseguimos para o desenrolar do mundo apolítico em ameaça"</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Storyboard 3: Conclusão</h2>
+      <img src="storybord3.jpeg">
+      <p>"O drama e a tensão lhe trouxeram até aqui, e você foi bravo ao nos acompanhar por essa jornada. Obrigado!"</p>
+    </div>
+      </div>
+</div>
+<br>
+ <div id="tutorial_gameplay" class="container text-center"> 
+    
+  <h3 class="text-center" style="margin-top: 50px;">TUTORIAIS</h3> 
+  <p class="text-center text-muted"><em>Aprenda as mecânicas essenciais do jogo para se tornar um Boticário Viajante!</em></p>
+  
+  <br>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="text-center">🎬 Tutorial de Gameplay: Como funciona a jogabilidade? </h4>
+    </div>
+    <div class="panel-body">
+      <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" controls>
+          <source src="tutorial.jogabilidade.mp4" type="video/mp4">
+          Seu navegador não suporta o vídeo tutorial.
+        </video>
+      </div>
+    </div>
+    <div class="panel-footer">
+        <p>A precisão é crucial. Um erro nas proporções pode ser fatal!</p>
+    </div>
+  </div>
+
+   <p class="text-center text-muted"><em>Aprenda como instalar nosso jogo!</em></p>
+  
+  <br>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="text-center">🎬 Tutorial de Gameplay: Como posso instalar? </h4>
+    </div>
+    <div class="panel-body">
+      <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" controls>
+          <source src="tutorial de intalação_1.mp4" type="video/mp4">
+          Seu navegador não suporta o vídeo tutorial.
+        </video>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <p>
+    Clique no botão abaixo para baixar o arquivo de instalação (APK) do nosso Jogo de Botânica para Android:
+</p>
+
+<a href="seu_jogo.apk" download="Jogo_Botanica_Instalar.apk" class="btn btn-success btn-lg">
+    Baixar Jogo (Arquivo APK)
+</a>
+<p>
+    Baixe a versão completa do nosso jogo e todos os arquivos em formato RAR:
+</p>
+
+<a href="jogo_botanica_v1.0.rar" download="Jogo_Botanica_Instalar.rar" class="btn btn-primary btn-lg">
+    Clique para Baixar (Arquivo .RAR)
+</a>
+        <p>Você também pode jogar web! É só acessa o link abaixo:</p>
+        <a href=" https://beatrizminoura-cmyk.github.io/ossos-do-oficio/" target="_blank"> Clique aqui para jogar</a>
+    </div>
+  </div>
+</div>
+<br>
+<div id="game_codes" class="container" style="padding-top: 50px;">
+    <h3 class="text-center" style="color: #804011; letter-spacing: 5px;">CÓDIGOS E RECURSOS</h3>
+    <p class="text-center text-muted"><em>Estrutura organizada dos principais scripts e assets do projeto.</em></p>
+    
+    <div class="panel-group" id="accordion">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #a8683a;">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="color: white;">
+                    🧪 Script Principal de Alquimia (Cálculo de Proporções)</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>Este código gerencia a lógica de medição do antídoto. A variável `toleranciaErro` é crítica!</p>
+                    <pre style="background-color: #f8f8f8; border-color: #ddd;">
+*Evento da balança*
+​<>Controlar Variáveis: #0020 Peso_atual = 0
+​<>Exibir Imagem: #1, balança, Superior Esq., (0,0), (80%, 70%), 250, Normal
+​<>Controlar Variáveis: #0019 Peso_alvo = 18
+​<>Texto: Nenhum, Janela, Inferior
+​: : Desafio da balança:
+​<>Texto: Nenhum, Janela, Inferior
+​: : De um lado da balança está um copo que pesa 18g.
+​: : Coloque os pesos certos e equilibre a balança.
+​<>Ciclo
+​<>Controlar Variáveis: #0018 Peso_display = Peso_atual
+​<>Texto: Nenhum, Janela, Inferior
+​: : O peso atual é: \V[18]g. O que deseja adicionar?
+​<>Exibir Escolhas: Ferro (+10g), Cobre (+5g), Vidro (+2g), Chamar Ajudante (+1g), Tentar
+​:Quando Ferro (+10g)
+​<>Controlar Variáveis: #0020 Peso_atual += 10
+​:
+​:Quando Cobre (+5g)
+​<>Controlar Variáveis: #0020 Peso_atual += 5
+​:
+​:Quando Vidro (+2g)
+​<>Controlar Variáveis: #0020 Peso_atual += 2
+​:
+​:Quando Chamar Ajudante (+1g)
+​<>Controlar Variáveis: #0020 Peso_atual += 1
+​:
+​:Quando Chamar Ajudante (+1g)
+​<>Controlar Variáveis: #0020 Peso_atual += 1
+​:
+​:Quando Tentar abrir (-5g)
+​<>Controlar Variáveis: #0020 Peso_atual -= 5
+​<>Se: Peso_atual = Peso_alvo
+​<>Reproduzir SE: Item3 (90, 100, 0)
+​<>Texto: Nenhum, Janela, Inferior
+​: : Parabéns! Você conseguiu balancear os pesos!
+​<>Texto: Nenhum, Janela, Inferior
+​: : Você ganhou 10 gramas de Pó de Caule Amargo.
+​<>Mudar Itens: Pó de Caule Amargo + 1
+​<>Apagar Imagem: #1
+​<>Controlar Switches: #0016 Balança = ON
+​<>Controlar Switches Locais: B = ON
+​<>Quebrar Loop
+​:
+​<>Se Não
+​<>Texto: Nenhum, Janela, Inferior
+​: : Não está equilibrado. Peso atual: \V[20]g.
+​<>Esperar: 30 quadros
+​:
+​<>Fim
+​:
+​<>Fim
+
+*Eventos do Temporizador (Timer)* - EV001 e Evento Comum: game over
+Estes eventos lidam com o início e o fim do temporizador para a fase do antídoto e o Game Over.
+EV001 - Página 1: Iniciar Fase (Ativação: Execução Automática)
+Conteúdo:
+ * Texto: Nenhum, Janela, Inferior
+   > \V[3] Fase \V[2]
+   > Ao completar essa fase, você poderá ganhar uma ajudante, que te ajudará nas poções.
+   > 
+ * Texto: Nenhum, Janela, Inferior
+   > Você conseguiu um enigma no seu Laboratório!
+   > Agora resolva os enigmas para subir de fase.
+   > 
+ * Controlar Cronômetro: Iniciar, 2 min 0 seg.
+ * Reproduzir BGM: Dungeon2 (60, 0, 0)
+ * Texto: People4(4), Janela, Inferior
+   > O Desafio de maceração começou!
+   > Tempo Limite: 2 Minutos
+   > 
+ * Controlar Switches Locais: A = ON
+EV001 - Página 2: Temporizador em Execução (Condição: Switch Local A = ON)
+Conteúdo:
+ * Vazio (Esta página apenas espera que o cronômetro expire ou que o Switch 0018 seja ligado)
+EV001 - Página 3: Fim da Fase (Condição: Switch 0018 fase 2 antídoto = ON)
+Conteúdo:
+ * Vazio (Esta página é ativada quando o antídoto é feito, provavelmente para impedir o Game Over por tempo. A próxima ação deve ocorrer em outro evento).
+Evento Comum: game over (Início: Paralelo | Condição: Switch 0017 fase2 concluída = ON)
+Conteúdo:
+ * Se:Cronômetro 0 min 0 seg
+   > Controlar Cronômetro: Parar
+   > Texto: Nenhum, Janela, Inferior
+   > > O tempo limite da maceração expirou.
+   > > Falha de Missão.
+   > > Fim de Jogo
+   > > Controlar Switches: #0017 fase2 concluída = ON
+   > > 
+   > 
+ * :Fim
+
+  *Eventos do Cadeado (Locker)* - EV003
+Estes eventos controlam a abertura de um armário trancado por um código.
+EV003 - Página 1: Cadeado Trancado (Ativação: Pressionar Tecla)
+Conteúdo:
+ * Texto: People4(4), Janela, Inferior
+   > O armário está trancado. Digite a senha de 3 dígitos
+   > 
+ * Texto: Nenhum, Janela, Inferior
+   > Dica: Quantos minutos existem em 12 horas e meia? (12,5 horas)?
+   > 
+ * Inserir Número: Número A = 750 (Variável A)
+ * Se: \V[A] = 750
+   > Texto: People4(4), Janela, Inferior
+   > > CÓDIGO Dragoflor coletada.
+   > > Controlar Switches: #0023 Dragoflor_ok = ON
+   > > Controlar Switches Locais: A = ON
+   > > Reproduzir SE: Absorb2 (90, 100, 0)
+   > > Mostrar Animação: Este Evento, Flash (Esperar)
+   > > Esperar: 60 quadros
+   > > Se Não
+   > > >> Script: $$$gameTimer._frames = $$gameTimer.\_frames - 15 * 60
+   > > >> Texto: Nenhum, Janela, Inferior
+   > > >>> Senha incorreta. -15s
+   > > :Fim
+   > > 
+   > 
+EV003 - Página 2: Armário Vazio (Condição: Switch Local A = ON)
+Conteúdo:
+ * Texto: People4(4), Janela, Inferior
+   > Armário vazio, Dragoflor coletado
+   > 
+
+*Evento da Proveta (Graduated Cylinder)* - EV007
+Este evento controla a medição de líquido em uma proveta para coletar a Essência Solar.
+EV007 - Página 1: Início da Medição (Condição: Switch = [Vazio])
+Conteúdo:
+ * Controlar Switches: #0050 medir líquido = ON
+ * Apagar Imagem: #1
+ * Quebrar Loop
+ * :Se: \V[volume\_líquido] > \V[volume\_correto]
+   > Texto: Nenhum, Janela, Inferior
+   > > Passou do ponto! Está acima da marca.
+   > > 
+   > 
+ * :Se Não
+   > Texto: Nenhum, Janela, Inferior
+   > > Ainda falta líquido para atingir \V[35] ml.
+   > > 
+   > 
+ * :Fim
+ * :Quando Sair
+   > Apagar Imagem: #1
+   > Quebrar Loop
+   > 
+ * :Fim
+ * :Repetir Acima
+EV007 - Página 2: Medição Correta (Condição: Switch #0050 medir líquido = ON)
+Conteúdo:
+ * :Se: \V[volume\_líquido] = \V[volume\_correto]
+   > Texto: Nenhum, Janela, Inferior
+   > > Perfeito! Você atingiu \V[35] ml e coletou a Essência Solar!
+   > > Mudar Itens: Essência Solar + 1
+   > > Controlar Switches: #0050 medir líquido = ON
+   > > Apagar Imagem: #1
+   > > Quebrar Loop
+   > > 
+   > 
+ * :Se Não
+   > :Se: \V[volume\_líquido] > \V[volume\_correto]
+   > >> Texto: Nenhum, Janela, Inferior
+   > >>> Passou do ponto! Está acima da marca.
+   > :Se Não
+   > >> Texto: Nenhum, Janela, Inferior
+   > >>> Ainda falta líquido para atingir \V[35] ml.
+   > :Fim
+   > 
+ * :Fim
+ * :Quando Sair
+   > Apagar Imagem: #1
+   > Quebrar Loop
+   > 
+ * :Fim
+ * :Repetir Acima
+
+ *Evento de Fazer Antídoto (Make Antidote)* - EV002
+Este evento controla a criação do antídoto através da checagem de ingredientes.
+EV002 (Ativação: Toque do Evento)
+Conteúdo:
+ * Reproduzir SE: Magic4 (90, 100, 0)
+ * Texto: Actor(1), Janela, Inferior
+   > Clique aqui para fazer os antídotos quando já tiver todos os ingredientes.
+   > 
+ * Script: \text{var a=} \$gameParty.\text{numItems}(\$dataItems[6]), \text{b=} \$gameParty.\text{numItems}(\$dataItems[7]);
+   > > $$$gameMessage.\text{add(}"Ingredientes: \backslash\backslashnVoz de Raiz Branca: \backslash\backslash\text{v}[6] \backslash\backslashnFlor de \text{la Lua: } \backslash\backslash\text{v}[7] \backslash\backslash\text{v}[6] + \backslash\backslash\text{v}[7] \backslash\backslash\text{nNectar Violeta: } \backslash\backslash\text{c}[4] if(a==1& & b==1) {$gameParty.\text{loseItem}($dataItems[6],1);$\$gameParty.\text{loseItem}($dataItems[7],1);$$gameParty.\text{gainItem}($dataItems[1],1);$\gameMessage.\text{add(}"Você criou um Antídoto!");\\$AudioManager.\text{playSe(}\{name:'Item3',volume:90,pitch:100,pan:0\});$\\\}
+   > > \text{else if(var f=[] if(a<1)\{f.push("Seiva de Raiz Branca");\}if(b<1)\{f.push("Pó de Flor da Lua");\}if(c<1)\{f.push("Néctar Violeta");\}\\\}
+   > > $$AudioManager.\text{playSe(}\{name:'Buzzer',volume:90,pitch:100,pan:0\});\gameMessage.\text{add(}"Ingredientes faltando:\backslash\backslash\text{n}\text{"}+f.\text{join(}" \backslash\backslash\text{n}\text{"})}
+   > > \text{;}
+   > > 
+   > 
+ * :Fim
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #545748;">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="color: white;">
+                    🌿 Lista de Assets de Botânica (Ingredientes)</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+    <li>
+        <span class="glyphicon glyphicon-leaf"></span> 
+        <div class="ingrediente-bloco">
+            <strong>Fase 1</strong><br>
+            * 15ml de Seiva de Raiz Branca<br>
+            * 5g de Pó de Flor da Lua<br>
+            * 10 gotas de Néctar Violeta
+        </div>
+    </li>
+    <li>
+        <span class="glyphicon glyphicon-tint"></span>  
+        <div class="ingrediente-bloco">
+            <strong>Fase 2</strong><br>
+            * 25ml de Extrato de Gengibre Negro<br>
+            * 2 colheres rasas de Cinza Azul<br>
+            * 7 gotas de Sangue de Dragoflor<br>
+            * Maceração com cristal de sal por 10 segundos
+        </div>
+    </li>
+    <li>
+        <span class="glyphicon glyphicon-fire"></span>
+        <div class="ingrediente-bloco">
+            <strong> Fase 3</strong><br>
+            * 30ml de Essência Solar<br>
+            * 10g de Pó de Caule Amargo<br>
+            * 5ml de Lágrima de Salamandra<br>
+            * Mistura a 80°C por 30 segundos
+        </div>
+    </li>
+</ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #223828;">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="color: white;">
+                    📜 Documentação Técnica (Game Design Document)</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Detalhes sobre a arquitetura do jogo e a progressão de nível:</p>
+                    <ol>
+                        <li>**Fase 1 (Iniciação):** Foco em coletar os ingredientes e curar a criançã. (Matemática: Soma e Subtração).</li>
+                        <li>**Fase 2 (Desenvolvimento):** Introdução à balança de precisão. (Matemática: Pesos e Unidades).</li>
+                        <li>**Fase 3 (Final):** Criação do Antídoto-Simbiótico. (Matemática: Divisão e Proporções Críticas).</li>
+                    </ol>
+                    <a href="#">https://beatrizminoura-cmyk.github.io/ossos-do-oficio/</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<hr>
+<!-- Image of location/map -->
+ 
+<footer class="text-center footer-elegant">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP" aria-label="Voltar ao topo">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-title-area">
+                <h4>Desenvolvido por:</h4>
+                <p class="project-tagline">Equipe de Desenvolvimento: Grupo 5</p>
+            </div>
+
+            <div class="col-md-8 footer-contact-list" style="text-align: left;">
+              <p>
+                      <p>
+                    Anita Maria de Sousa Ginetti:<br>
+                    E-mail: anita.maria@aluno.ifsp.edu.br | Tel: (11) 91513-5611<br>
+                      </p>
+                      <p>
+                      Beatriz Sati Minoura:<br>
+                      E-mail: beatriz.minoura@gmail.com | Tel: (11) 93499-2950<br>
+                      </p>
+                      Clarice Cortez Generoso:<br>
+                      E-mail: Melgeneroso33@gmail.com | Tel: (11) 98726-4540<br>
+                      <p>
+                      Gabriela de Paula Silvestre Correa:<br>
+                      E-mail: gabriela.dpaula.scorrea@gmail.com | Tel: (11) 97086-4213<br>
+                      </p>
+                      <p>
+                      Iago Braga Nascimento:<br>
+                      E-mail: Iagobraaga@gmail.com | Tel: (11) 95974-5339 <br>
+                      </p>
+                      <p>
+                      Pedro Murilo Gonzaga:<br>
+                      E-mail: murilo.pedro@aluno.ifsp.edu.br | Tel: (11) 99289-7398<br>
+                      </p>
+              </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <hr class="footer-separator">
+        <p class="copyright-text">&copy; 2025. Todos os direitos reservados.</p> 
+    </div>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
